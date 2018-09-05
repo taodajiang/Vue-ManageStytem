@@ -1,0 +1,263 @@
+
+@import './mixin.less';
+@import './element-ui.less';
+// @import './sidebar.less';
+@import './transition.less';
+@import './variables.less';
+@import './table.less'; //表格通用 样式
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+div:focus{
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+ul,ol,dl{
+  list-style: none;
+}
+.clearfix:after
+ {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix{
+    zoom: 1;
+}
+//表格上方查询栏input右边距
+.margin-right-common{
+  margin-right:20px;
+}
+//main-container全局样式
+.app-main{
+  min-height: 100%
+}
+
+.app-container {
+  padding: 20px;
+}
+
+//左侧菜单栏字号
+.el-submenu__title{
+  font-size: 16px;
+}
+
+//文本域不可拖动
+.el-textarea__inner {
+  resize: none;
+}
+//统一弹窗样式
+.el-message-box{
+    // background: url("../assets/img/tc_bg1.png") no-repeat top left ;
+    border-radius: 10px;
+    background-size:100% auto;
+    background-color:#fff;
+    height:300px;
+    width:440px;
+    border:0;
+    .el-message-box__header{
+      position: relative;
+      padding: 15px;
+      padding-bottom: 40px;
+      margin: 20px;
+      text-align: center;
+      .el-message-box__title{
+        color: #fff;
+        font-weight: 700;
+        font-size: 26px;
+        letter-spacing: 5px;
+      }
+      .el-message-box__headerbtn{
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background-color: #AD9D72;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        .el-message-box__close{
+          color: #ccc;
+        }
+      }
+    }
+    .el-message-box__content {
+      position: relative;
+      padding: 10px 15px;
+      color: #606266;
+      font-size: 18px;
+      text-align: center;
+      margin: 30px;
+  }
+    .el-message-box__btns {
+      padding: 5px 15px 0;
+      text-align: center;
+  }
+  .el-icon-warning:before {
+    content: "";
+  }
+  .el-button--small {
+    float: right;
+    width: 100px;
+    padding: 9px 15px;
+    font-size: 16px;
+    border-radius: 30px;
+    margin: 0px 50px;
+  }
+  }
+//每页标题样式
+.title{
+  position: relative;
+  padding-left: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #c3b382;
+  margin-bottom: 20px;
+}
+// .title::before{
+//   content: url('../assets/img/title.png');
+//   position: absolute;
+//   left: 0px;
+//   top: 2px;
+// }
+//表格操作栏文字颜色
+.operate-search{
+  color: #6579fc;
+}
+.operate-modify{
+  color: #32b4c3
+}
+.operate-check{
+  color: #cdb27e
+}
+.operate-del{
+  color: #e52e2e
+}
+.operate-rests{
+  color: #316da1
+}
+//遮罩
+.shade{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+
+    .remind{
+      width:360px;
+      height:200px;
+      position:fixed;
+      left:0;
+      right:0;
+      top:0;
+      bottom:0;
+      margin:auto;
+      z-index:1000;
+      background:#fff;
+      border-radius: 5px;
+      .top{
+        height:50px;
+        background:#333333;
+        color:#8d8d8d;
+        line-height:50px;
+        text-align:center;
+        border-radius: 5px 5px 0 0;
+        h3{
+          margin:0;
+        }
+      }
+      .main{
+        height:90px;
+        text-align:center;
+      }
+    }
+
+
+    .confirm,.cancel{
+      width:120px;
+      height:36px;
+      line-height:18px;
+      font-size:18px;
+      border-radius: 18px;
+      position:absolute;
+      bottom:20px;
+    }
+    .confirm{
+      background:#cdb27e;
+      color:#5b4e35;
+      left:25px;
+      border:none;
+    }
+    .cancel{
+      background:#fff;
+      right:25px;
+      color:#c3b382;
+      border:1px solid #c6b78b;
+    }
+}
+.confirmBtn,.cancelBtn{
+  width:120px;
+  height:36px;
+  line-height:18px;
+  font-size:18px;
+  border-radius: 18px;
+  position:absolute;
+  bottom:20px;
+}
+.confirmBtn{
+  background:#cdb27e;
+  color:#5b4e35;
+  left:25px;
+  border:none;
+}
+.cancelBtn{
+  background:#fff;
+  right:25px;
+  color:#c3b382;
+  border:1px solid #c6b78b;
+}
